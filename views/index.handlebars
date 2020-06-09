@@ -1,34 +1,43 @@
-<h1>Burger Logger</h1>
+<section class="row">
+  <h1>Burger Logger</h1>
+</section>
+<section class="row">
+  <img class="col-sm-12" src="/public/assets/img/Burger.png" alt="Burger image"/>
+</section>
 
-{{!-- <h2>Cats that are not sleepy!</h2> --}}
-
-<ul class="uneaten">
-  {{#each burgers}}
-    {{#unless this.devoured}}
-    {{this.id}}{{this.burger_name}}
-      {{!-- {{button here}} --}}
-    {{/unless}}
-  {{/each}}
-</ul>
-
-{{!-- <h2>Cats that are sleepy!</h2> --}}
-
-<ul class="devoured">
-  {{#each burgers}}
-    {{#if this.devoured}}
-    {{this.id}}{{this.burger_name}}
-      {{!-- {{> cats/cat-block sleep=false}} --}}
-    {{/if}}
-  {{/each}}
-</ul>
+<section class="row">
+  <section class="col-sm-6">
+    <h3 class="text-center">Uneaten</h3>
+    <article>
+      <ul class="uneaten">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        {{this.id}} {{this.burger_name}}
+        <button class="change-devour" data-id={{id}}>DEVOUR!!!</button>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </article>
+  </section>
+  <section class="col-sm-6">
+    <h3 class="text center">Eaten</h3>
+    <article>
+      <ul class="devoured">
+        {{#each burgers}}
+        {{#if this.devoured}}
+        {{this.id}}{{this.burger_name}}
+        <button class="delete-burger" data-id={{id}}>DELETE!!!</button>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </article>
+  </section>
+</section>
 
 <h2>Create Burger</h2>
 <form class="create-form1">
   <div class="form-group">
     <input id="burger" type="text"></input>
-    {{!-- <label for="slee"></label><br> --}}
-    {{!-- <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake --}}
   </div>
   <button type="submit" class="create-form">Submit</button>
 </form>
