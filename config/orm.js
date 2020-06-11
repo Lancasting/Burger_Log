@@ -71,6 +71,20 @@ function objToSql(ob) {
        }
        cb(result);
     });
+   },
+   delete: function(table, condition, cb){
+     
+     var queryString = "DELETE FROM ";
+     queryString += table;
+     queryString += " WHERE id = ";
+     queryString += condition.toString();
+     console.log(queryString);
+     connection.query(queryString, function(err, result){
+      if (err){
+        throw err
+      }
+      cb(result);
+     });
    }
  };
  module.exports = orm;
