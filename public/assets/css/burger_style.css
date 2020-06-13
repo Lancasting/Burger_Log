@@ -1,11 +1,29 @@
 body{
-  background-color: orange;
+  background-color: rgb(177, 138, 65);
   color: white;
+  text-align: center;
 }
-li {
+.li {
     padding: 5px;
     margin: 5px;
-    background: #faebd7;
-    background-color: thistle;
   }
-  
+.burger {
+  mix-blend-mode: multiply;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  margin-left: auto;
+  margin-right: auto;
+}
+.uneaten, .devoured {
+  background-color:lightgreen;
+  color: black;
+}
+.change-devour {
+  float: right;
+}
+.delete-burger {
+  float: right;
+}
