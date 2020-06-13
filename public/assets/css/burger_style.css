@@ -2,9 +2,10 @@ body{
   background-color: orange;
   color: white;
 }
-.li {
+li {
     padding: 5px;
     margin: 5px;
     background: #faebd7;
+    background-color: thistle;
   }
   

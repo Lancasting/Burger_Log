@@ -72,7 +72,7 @@ function objToSql(ob) {
        cb(result);
     });
    },
-   delete: function(table, condition, cb){
+   delete: function(table, condition, cb) {
      
      var queryString = "DELETE FROM ";
      queryString += table;
