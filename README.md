@@ -25,8 +25,7 @@ As a foodie I want to keep track of the burgers I have eaten so I don't eat too 
 
 # Installation
 
-To install the application clone the repository to your computer and run it through Node.js. 
-You will then be prompted for the various inputs you can add to the readme.
+No installation needed just use the URL listed above
 
 # Usage
 
