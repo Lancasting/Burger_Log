@@ -3,9 +3,8 @@ body{
   color: white;
   text-align: center;
 }
-.li {
-    padding: 5px;
-    margin: 5px;
+li {
+    width: 100%;
   }
 .burger {
   mix-blend-mode: multiply;

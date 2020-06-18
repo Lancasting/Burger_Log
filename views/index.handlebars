@@ -10,11 +10,13 @@
     <h3 class="text-center">Uneaten</h3>
     <article>
       <ul class="uneaten">
-        <li>
+        
         {{#each burgers}}
         {{#unless this.devoured}}
-        {{this.id}} {{this.burger_name}}
-        <button class="change-devour" data-id={{id}}>DEVOUR!!!</button>
+        <div class="row">
+        <li>{{this.id}} {{this.burger_name}}
+        <button class="change-devour" data-id={{id}}>DEVOUR!!!</button></li>
+        </div>
         {{/unless}}
         {{/each}}
         </li>
@@ -22,14 +24,16 @@
     </article>
   </section>
   <section class="col-sm-6">
-    <h3 class="text center">Eaten</h3>
+    <h3 class="text-center">Eaten</h3>
     <article>
       <ul class="devoured">
-        <li>
+        
         {{#each burgers}}
         {{#if this.devoured}}
-        {{this.id}} {{this.burger_name}}
-        <button class="delete-burger" data-id={{id}}>DELETE!!!</button>
+        <div class="row">
+        <li>{{this.id}} {{this.burger_name}}
+        <button class="delete-burger" data-id={{id}}>DELETE!!!</button></li>
+        </div>
         {{/if}}
         {{/each}}
         </li>
